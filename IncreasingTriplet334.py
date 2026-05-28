@@ -8,7 +8,7 @@
 
 # Notes to self (deep understanding):
 # The approach is very interesting and actually takes advantage of the
-# problem conditions. Current algorithm answers the question "is the
+# problem conditions. Current algorithm answers the question "is there a possibility for a
 # triplet sequence," however if asked what the sequence is the answer would
 # be wrong. All because the algorithm aims to find the smallest possible
 # values for first and second. If the sequence like [5, 10, 1 ,20] (returns
@@ -21,16 +21,16 @@
 # indexes out of order? Index of first is 2, index of second is 1, and index
 # of third is 3.
 # However, this doesn't break the algorithm, because it never asked to output
-# the indexes, it only asked are there possible arbitrary indexes that
-# satisfy the condition?
+# the indexes, it only asked "are there possible arbitrary indexes that
+# satisfy the condition?". 
 # Again, the whole idea of the algorith is that it attempts to find the least
 # possible number for first and second, that's why during iteration 3 it
-# replaces first with 1. The algorithm hopes that in the next iterations we
-# will find value for the second that is less than outer current second.
-# However, if we do not (as in this example) all we need to know that there
+# replaces first with 1. The algorithm "hopes" that in the next iterations we
+# will find value for the second that is less than our current second.
+# However, if we do not (as in this example) all we need to know is that there
 # is the arbitrary sequence that we saw before (5 ,10) that should be less
-# then the third num,ber we find.
-# TLDR: the algorithm doesn't;t return the correct indexes if asked, it only
+# then the third number we find.
+# TLDR: the algorithm doesn't return the correct indexes if asked, it only
 # tells whether there is a possibility for those indexes to exist.
 
 class Solution:
